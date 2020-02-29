@@ -56,23 +56,22 @@ function determineWinner(userChoice, computerChoice) {
 
 function playGame() {
 
- /*   const readline = require('readline').createInterface({
+    const readline = require('readline').createInterface({
         input: process.stdin,
         output: process.stdout
       })
       
-         readline.question("Please choose bear, human or gun", (promptUserChoice) => {
-           this.promptUserChoice=promptUserChoice;
+         readline.question("Please choose bear, human or gun :", (promptUserChoice) => {
         readline.close()
-      });
+     
 
-  */
+
   // var promptUsesChoice = prompt("Please choose bear, human or gun");
    
     
   
   
-  var promptUserChoice="bear";             // Hard coding the input
+ // var promptUserChoice="bear";             // Hard coding the input
 
 
 
@@ -82,6 +81,7 @@ function playGame() {
     var computerChoice = getComputerChoice();
   
     console.log(determineWinner(userChoice, computerChoice));
+});
 }
 
 
