@@ -1,22 +1,25 @@
 
 function matrixSearch(arr,key){
-    console.log(arr[i][i]);
-    console.log(arr[j][j]);
-    if(key < arr[i][i] || key > arr[j][j]){
+
+    var rowLength = arr.length;
+    var row=0;
+    var column=arr[0].length;
+
+    if(key < arr[0][0] || key > arr[rowLength-1][column-1]){
         return false;
     }
     else
     {
-        while(i<arr.length && j>=0){
-            if(key == arr[i][j]){
+        while(row<rowLength && column-1>=0){
+            if(key == arr[row][column-1]){
                  return true;
              }
-             if(key < arr[i][j]){
-                 j--;
+             if(key < arr[row][column-1]){
+                 column--;
               }
               else
              {
-                 i++;
+                 row++;
              }
          }
         
@@ -24,4 +27,4 @@ function matrixSearch(arr,key){
    
 }
 
-console.log(matrixSearch([[1,2,3],[4,5,6],[7,8,9]], 5));
+console.log(matrixSearch([[1,2,3],[4,5,6],[7,8,9]], 0));
