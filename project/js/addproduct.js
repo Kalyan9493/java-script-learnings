@@ -8,10 +8,10 @@ $(document).ready(function() {
             catagory:$("#catagory").val(),
             memory:$("#memory").val(),
             os:$("#os").val(),
-            ram:$("#add").val(),
+            ram:$("#ram").val(),
             price:$("#price").val()
         };
-    
+    if(user.pname !== "" && user.catagory !== "" && user.os!=="" && user.ram!=="" && user.ram!="" && user.price!=="" ){
        $.ajax({
             type:'POST',
             contentType:'application/json',
@@ -26,7 +26,9 @@ $(document).ready(function() {
                 alert("Error In Adding product");
             }
         }); 
-    
+    }else{
+        alert("All Fields Should Be filled");
+    }
         console.log(user);
     
     });
